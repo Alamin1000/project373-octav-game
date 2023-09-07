@@ -80,11 +80,12 @@ if (serviceTabIndex) {
     },
   });
   $(".real-slider-active").owlCarousel({
+    center: true,
     loop: true,
     margin: 0,
     responsiveClass: true,
-    center: true,
     autoWidth: true,
+    items: 10,
     nav: true,
     dots: false,
     // items: 3,
@@ -93,10 +94,10 @@ if (serviceTabIndex) {
     // slideTransition: "linear",
     // autoplayTimeout: 2300,
     // autoplaySpeed: 2300,
-    autoplayHoverPause: false,
+    // autoplayHoverPause: false,
     navText: [
-      '<i class="far fa-arrow-left"></i>',
-      '<i class="far fa-arrow-right"></i>',
+      '<i class="far fa-chevron-left"></i>',
+      '<i class="far fa-chevron-right"></i>',
     ],
     responsive: {
       0: {},
