@@ -174,6 +174,7 @@
     }
     .about-o-content .bottom-buttons .button {
         min-height: 55px;
+        font-size: 17px;
     }
     .about-o-content .bottom-buttons .row {
         --bs-gutter-x: 25px;
@@ -181,6 +182,31 @@
     }
     .about-o-content .bottom-buttons {
         margin-top: 30px;
+    }
+
+    .ben_content--img img {
+        width: 170px;
+    }
+    .ben_content h2 {
+        margin-bottom: 17px;
+        font-size: 37px;
+    }
+    .ben_content h4 {
+        font-size: 17px;
+        line-height: 30px;
+    }
+    .ben-accordion-item__title h4 {
+        font-size: 23px;
+    }
+    .ben-accordion-item__body__inner p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .ben-accordion-item__title {
+        padding: 14px 0px 9px;
+    }
+    .ben-accordion-item__body__inner {
+        padding: 20px 0px 24px 0px;
     }
 
     .pro-slide-box {
@@ -202,11 +228,14 @@
         font-size: 23px;
     }
     .pro-slide-box h3 {
-        font-size: 18px;
+        font-size: 21px;
         margin-bottom: 12px;
     }
+    .pro-slider .swiper-button-prev, .pro-slider .swiper-button-next {
+        --off: 80px;
+    }
     .pro-slide-box p {
-        font-size: 14px;
+        font-size: 12px;
     }
     .pro-slide-box__inner {
         padding: 20px 15px;
@@ -291,6 +320,11 @@
     .real-slider .owl-nav button {
         --off: 20px;
     }
+
+
+    .about-hero {
+        background-size: 480px 500px;
+    }
 }
 
 
@@ -316,6 +350,13 @@
 
     .about-o-content {
         margin-top: 0px;
+    }
+    .about-o-image {
+        text-align: center;
+        margin-right: 0;
+    }
+    .about-o-image img {
+        width: 400px;
     }
 
     .hero-row {
@@ -504,18 +545,18 @@
 
 
     .about-hero__content h1 {
-        font-size: 22px;
+        font-size: 36px;
         margin-bottom: 30px;
     }
     .about-hero__content h4 {
         font-size: 17px;
     }
     .about-hero {
-        padding: 30px 0 20px;
+        padding: 120px 0 0px;
     }
 
     .about-o-section {
-        padding: 50px 0;
+        padding: 0px 0 50px;
     }
 
    
@@ -668,4 +709,7 @@
         --off: -20px;
     }
 
+    .about-hero__content h1 {
+        font-size: 32px;
+    }
 }
