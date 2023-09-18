@@ -296,7 +296,7 @@
     p {
         font-size: 13.5px;
     }
-    .studio__content p {
+    .studio__content--award p {
         padding-right: 0px;
     }
     .studio__content .cont-blk--line {
@@ -365,6 +365,7 @@
     }
     .escape-content {
         padding: 36px 30px 30px 40px;
+        min-height: 410px;
     }
     .escape-desc p {
         font-size: 14px;
@@ -593,8 +594,6 @@
         text-align: center;
     }
     .join-thumb span img {
-        max-width: 374px;
-        width: 100%;
     }
     .expertisBlock {
         margin: 0 auto;
