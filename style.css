@@ -1500,7 +1500,7 @@ section.open-section {
   pointer-events: all;
 }
 .real-slide {
-  filter: drop-shadow(0 0 20px rgb(0, 0, 0));
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.6));
 }
 .owl-item.center .real-slide {
   filter: drop-shadow(0 0 20px rgb(0, 0, 0));
@@ -1528,7 +1528,7 @@ section.open-section {
   content: '';
   height: 65%;
   width: calc(100% + 11px);
-  background: linear-gradient(transparent, rgba(87, 0, 0, 0.8));
+  background: linear-gradient(transparent, rgba(49, 0, 0, 0.95));
   position: absolute;
   bottom: 0;
   left: -19px;
@@ -1881,7 +1881,7 @@ span.pretitle{
 }
 
 .expertis-img img {
-	max-width: 474px;
+	max-width: 420px;
 }
 
 

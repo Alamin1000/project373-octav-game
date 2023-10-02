@@ -425,6 +425,10 @@
         font-size: 12px;
     }
 
+    .expertis-img img {
+        max-width: 350px;
+    }
+
 }
 
 
@@ -960,6 +964,11 @@
     .pro-slider .swiper-button-next {
         --off: 40px;
     }
+
+
+    .real-slide__inner::after {
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
+    }
 }
 
 
@@ -971,5 +980,14 @@
 
     .about-hero__content h1 {
         font-size: 32px;
+    }
+
+
+    .real-slide {
+        --width-number: 157;
+    }
+    .real-slide__inner::after {
+        height: 100%;
+        transform: skew(-12deg, 0deg) translate(5.9%);
     }
 }
