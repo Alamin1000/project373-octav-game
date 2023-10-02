@@ -108,7 +108,13 @@ p:last-child{
   left: 0;
   width: 100%;
   z-index: 100;
+  transition: 0.3s;
 }
+.header-section.sticky {
+  background-color: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(4px);
+}
+
 .header-filled {
   background: linear-gradient(#121416, #121416);
 }
@@ -173,6 +179,9 @@ p:last-child{
 .main-menu > ul > li > a.active::after,
 .main-menu > ul > li > a.active::before {
   /* opacity: 1; */
+}
+.main-menu > ul > li > a.active {
+  color: var(--theme__color1);
 }
 
 .hr-button {
@@ -244,15 +253,11 @@ p:last-child{
   display: block;
   text-align: center;
   font-size: 16px;
-  color: var(--theme__color1);
+  color: #fff;
   padding: 10px;
 }
-.dropdown-menu-custom ul {
-  background: #fff;
-  padding: 20px 0;
-}
-.dropdown-menu-custom ul li a {
-  color: #97A3AE;
+.mobile-menu li a.active {
+  color: var(--theme__color1);
 }
 .offcanvas-overlay {
   position: fixed;
@@ -327,6 +332,7 @@ p:last-child{
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
@@ -341,7 +347,7 @@ p:last-child{
   
 }
 /* width */::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
@@ -435,6 +441,11 @@ p:last-child{
   font-family: var(--bebas-neue);
   letter-spacing: 1.4px;
   color: #ADABAC;
+}
+.hero-content h4.poppins {
+  font-size: 16.9px;
+  color: #fff;
+  line-height: normal;
 }
 .hero-content .h1 {
   font-size: 70px;
@@ -907,7 +918,7 @@ p:last-child{
 
 /* ---about-hero--- */
 .about-hero__outer {
-
+  overflow: hidden;
 }
 .about-hero__outer .fp-overflow {
   flex-grow: 1;
@@ -1166,6 +1177,9 @@ section.open-section {
 .pro-slider {
 
 }
+.swiper-cards .swiper-slide {
+  opacity: 1;
+}
 .pro-slider__inner {
 
 }
@@ -1177,19 +1191,16 @@ section.open-section {
   width: 503px;
   margin: 0 auto;
 }
-.pro-slider.slider-arrow-centered .owl-nav button {
-  --off: -116px;
-}
 .pro-slider .swiper-button-prev,
 .pro-slider .swiper-button-next {
   --off: 140px;
   color: var(--theme__color1);
   width: 10px !important;
-  left: calc(var(--off) * -1);
+  left: calc(var(--off) * -1) !important;
 }
 .pro-slider .swiper-button-next {
-  right: calc(var(--off) * -1);
-  left: unset;
+  right: calc(var(--off) * -1) !important;
+  left: unset !important;
 }
 
 .swiper-button-next::after,
@@ -1385,15 +1396,21 @@ section.open-section {
 .studio__content .cont-blk--line {
   width: calc(100% - 150px);
 }
+.studio__content .studio-1-blk--line {
+  width: calc(100% - 0px);
+}
 .studio__content p {
 
 }
 .studio__content--award p {
-  padding-right: 100px;
+	padding-right: 50px;
 }
 
 .studio__image {
 	width: 87%;
+}
+.studio__image-1 {
+	margin-right: -8.6%;
 }
 /* ---studio-section---end */
 
@@ -1473,19 +1490,28 @@ section.open-section {
   flex-direction: column;
   transition: 0.3s;
   margin: 0 0 calc(var(--center-extra-height) * 0.5);
-  pointer-events: none;
+  /* pointer-events: none; */
   z-index: 1;
+}
+.real-slide-content{
+  pointer-events: none;
+}
+.owl-item.center .real-slide-content{
+  pointer-events: all;
+}
+.real-slide {
+  filter: drop-shadow(0 0 20px rgb(0, 0, 0));
 }
 .owl-item.center .real-slide {
   filter: drop-shadow(0 0 20px rgb(0, 0, 0));
-  pointer-events: all;
+  /* pointer-events: all; */
 }
 .owl-item.center .real-slide {
   height: calc(var(--height) + var(--center-extra-height));
   margin: calc(var(--center-extra-height) * -0.5) 0 0;
 }
 .real-slide__inner {
-  clip-path: polygon(calc(var(--path) * 1) 0, 100% 0, calc((100% - var(--path) * 1)) 100%, 0 100%); 
+  /* clip-path: polygon(calc(var(--path) * 1) 0, 100% 0, calc((100% - var(--path) * 1)) 100%, 0 100%);  */
   position: relative;
   z-index: -1;
   width: calc(100% + var(--path));
@@ -1501,34 +1527,36 @@ section.open-section {
 .real-slide__inner::after {
   content: '';
   height: 65%;
-  width: 100%;
+  width: calc(100% + 11px);
   background: linear-gradient(transparent, rgba(87, 0, 0, 0.8));
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: -19px;
   z-index: -1;
   opacity: 0;
   transition: 0.3s;
+  transform: skew(-12deg, 0deg);
 }
 .owl-item.center .real-slide__inner::after {
   opacity: 1;
 }
 .owl-item.center .real-slide .real-slide__inner {
-  --new-path: var(--path) * ((var(--center-extra-height-number) + var(--height-number)) / var(--height-number));
+  /* --new-path: var(--path) * ((var(--center-extra-height-number) + var(--height-number)) / var(--height-number));
   clip-path: polygon(calc(var(--new-path) * 1) 0, 100% 0, calc((100% - var(--new-path) * 1)) 100%, 0 100%); 
   width: calc((calc(100% + var(--path))) + (var(--new-path) - var(--path)));
   margin-left: calc(var(--path) * -0.5 - ((var(--new-path) - var(--path)) * 0.5));
-  padding: calc(var(--center-extra-height) * 0.5) 0;
+  padding: calc(var(--center-extra-height) * 0.5) 0; */
 }
 .real-slide__background {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
+  height: calc(100%);
+  width: calc(100% + 11px);
   z-index: -1;
   filter: grayscale(1);
   transition: 0.3s;
+  transform: skew(-12deg, 0deg);
 }
 .owl-item.center .real-slide__background {
   filter: grayscale(0);
@@ -1540,7 +1568,7 @@ section.open-section {
   object-position: center;
 }
 .real-slide-content {
-	padding: 40px 110px 40px 60px;
+	padding: 40px 42px 40px 15px;
 	opacity: 0;
 	transition: 0.3s;
 }
@@ -1549,12 +1577,13 @@ section.open-section {
 }
 .real-slide-content__title {
   padding: 0 0 15px 18px;
+  display: block;
 }
 .real-slide-content__title h3 {
-  font-size: 36px;
-  margin-bottom: 3px;
-  font-family: var(--bebas-neue);
-  font-weight: 400;
+	font-size: 50px;
+	margin-bottom: 6px;
+	font-family: var(--bebas-neue);
+	font-weight: 400;
 }
 .real-slide-content__title .r-line {
   background: var(--theme__color1);
@@ -1565,13 +1594,13 @@ section.open-section {
 
 }
 .real-slide-content__body p {
-  font-size: 9.6px;
+	font-size: 15px;
 }
 .real-slide-content .hbr-line {
   height: 3px;
 }
 .real-slide-content .txt-btn {
-  font-size: 12px;
+	font-size: 15px;
 }
 /* ---real-section---end */
 
@@ -1683,6 +1712,7 @@ span.pretitle{
 }
 .about-hero-section .hero-content h4{
   text-align: justify;
+  font-weight: 100;
 }
 .title{
   font-size: 70px;

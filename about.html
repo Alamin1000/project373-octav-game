@@ -39,7 +39,7 @@
 
           <div class="main-menu d-lg-block d-none">
             <ul>
-              <li><a href="about.html">ABOUT</a></li>
+              <li><a class="active" href="#">ABOUT</a></li>
               <li><a href="games.html">GAMES</a></li>
               <li><a href="news.html">NEWS</a></li>
               <li><a href="careers.html">CARRERS</a></li>
@@ -66,7 +66,7 @@
           </a>
           <a href="#" class="offcanvas-close"><i class="fal fa-times"></i></a>
           <ul class="mobile-menu">
-            <li><a href="about.html">ABOUT</a></li>
+            <li><a class="active" href="#">ABOUT</a></li>
             <li><a href="games.html">GAMES</a></li>
             <li><a href="news.html">NEWS</a></li>
             <li><a href="careers.html">CARRERS</a></li>
@@ -102,7 +102,7 @@
                         >LEARN MORE ABOUT</span
                       >
                       <h1 class="h1 mb-4">OUR COMPANY</h1>
-                      <h4>
+                      <h4 class="poppins">
                         <span class="color-theme1">OCTAV STUDIO</span> is an
                         award-winning VR game studio pioneering immersive gaming
                         experiences. We develop innovative VR games across
@@ -184,11 +184,11 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
                           <button
-                            class="accordion-button"
+                            class="accordion-button collapsed"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseOne"
-                            aria-expanded="true"
+                            aria-expanded="false"
                             aria-controls="collapseOne"
                           >
                             Setting the Standard for Creativity
@@ -196,7 +196,7 @@
                         </h2>
                         <div
                           id="collapseOne"
-                          class="accordion-collapse collapse show"
+                          class="accordion-collapse collapse"
                           aria-labelledby="headingOne"
                           data-bs-parent="#accordionExample"
                         >
@@ -321,9 +321,13 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg-6 order-lg-0 order-first">
+                <div class="ps-xl-4 pb-xl-5 pb-4 pt-lg-4">
+                  <h4 class="h4-t">WHY SO SPECIAL?</h4>
+                  <h2 class="h2">WHY OCTAV STUDIO?</h2>
+                </div>
                 <div
-                  class="expertis-img text-center text-lg-end"
+                  class="expertis-img text-center text-lg-end d-lg-block d-none"
                   data-aos="zoom-in"
                   data-aos-duration="1500"
                   data-aos-delay="100"

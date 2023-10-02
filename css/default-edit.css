@@ -170,6 +170,9 @@
 .font4 {
     font-family: var(--font4);
 }
+.poppins {
+    font-family: var(--poppins) !important;
+}
 
 
 /* text-color */
