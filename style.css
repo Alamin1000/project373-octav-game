@@ -1528,7 +1528,7 @@ section.open-section {
   content: '';
   height: 65%;
   width: calc(100% + 11px);
-  background: linear-gradient(transparent, rgba(49, 0, 0, 0.95));
+  background: linear-gradient(transparent, rgba(49, 0, 0, 0.7));
   position: absolute;
   bottom: 0;
   left: -19px;

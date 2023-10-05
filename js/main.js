@@ -105,7 +105,8 @@ if (serviceTabIndex) {
     responsiveClass: true,
     autoWidth: false,
     items: 2,
-    // autoplay: true,
+    dotsEach: 1,
+    autoplay: true,
     autoplayHoverPause: true,
     autoplayTimeout: 5000,
     smartSpeed: 800,
@@ -254,41 +255,41 @@ if (serviceTabIndex) {
   // });
 
   // accordion-switching after-5000
-  const joinSection = document.querySelectorAll('.join-section')
-  joinSection.forEach(wrap => {
+  const joinSection = document.querySelectorAll(".join-section");
+  joinSection.forEach((wrap) => {
     let indicator = true;
     let accordionButtons = wrap.querySelectorAll(".accordion-button");
     let currentIndex = 0;
     let swithInterval;
 
-    window.addEventListener('scroll',()=>{
+    window.addEventListener("scroll", () => {
       let t = wrap.getBoundingClientRect().top - window.innerHeight / 2;
       let h = wrap.clientHeight;
-       
+
       if (t <= 0 && Math.abs(t) <= h) {
         if (indicator) {
-          activeSwitchAccordion()
+          activeSwitchAccordion();
         }
         indicator = false;
-      }else{
+      } else {
         indicator = true;
-        clearInterval(swithInterval)
+        clearInterval(swithInterval);
       }
-    })
-  
+    });
+
     function switchAccordionSection() {
       // Close the current section
       accordionButtons[currentIndex].click();
-      // Calculate the index of the next section to open    
+      // Calculate the index of the next section to open
       currentIndex = (currentIndex + 1) % accordionButtons.length;
       // Open the next section
-      accordionButtons[currentIndex].click();  
+      accordionButtons[currentIndex].click();
     }
 
     function activeSwitchAccordion() {
-      if (accordionButtons[0].classList.contains('collapsed')) {   
+      if (accordionButtons[0].classList.contains("collapsed")) {
         currentIndex = 0;
-        switchAccordionSection()
+        switchAccordionSection();
       }
       // Start auto-switching after the page loads
       swithInterval = setInterval(switchAccordionSection, 5000);

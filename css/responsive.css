@@ -967,7 +967,11 @@
 
 
     .real-slide__inner::after {
-        background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
+        height: 100%;
+        transform: skew(-12deg, 0deg) translate(4.65%);
+    }
+    .real-slide__inner::after {
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(24, 10, 10, 0.95));
     }
 }
 
@@ -987,7 +991,7 @@
         --width-number: 157;
     }
     .real-slide__inner::after {
-        height: 100%;
         transform: skew(-12deg, 0deg) translate(5.9%);
     }
+
 }
