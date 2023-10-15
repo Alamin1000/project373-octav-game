@@ -106,7 +106,7 @@ if (serviceTabIndex) {
     autoWidth: false,
     items: 2,
     dotsEach: 1,
-    autoplay: true,
+    autoplay: false,
     autoplayHoverPause: true,
     autoplayTimeout: 5000,
     smartSpeed: 800,
