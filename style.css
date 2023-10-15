@@ -1475,6 +1475,7 @@ section.open-section {
   --center-extra-height: calc(var(--center-extra-height-number) * 1px);
   height: var(--height);
   width: var(--width);
+  /* min-width: 100%; */
   z-index: 1;
   position: relative;
   display: flex;
@@ -1517,12 +1518,14 @@ section.open-section {
 }
 .real-slide__inner::after {
   content: "";
-  height: 65%;
+  /* height: 65%; */
+  height: 100%;
   width: calc(100% + 12px);
-  background: linear-gradient(transparent 20%, rgba(49, 0, 0, 0.9) 80%);
+  /* background: linear-gradient(transparent 20%, rgba(49, 0, 0, 0.9) 80%); */
+  background: linear-gradient(#00000059 5%, rgb(21 0 0) 80%);
   position: absolute;
   bottom: 0;
-  left: -21px;
+  left: -0px;
   z-index: -1;
   opacity: 0;
   transition: 0.3s;
